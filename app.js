@@ -52,7 +52,7 @@ app.post("/books", (req, res) => {
 
   db.query(query, [values], (err, data) => {
     if (err) return res.json(err);
-    return res.json("Book has been created successfully");
+    return res.json("The book has been created successfully");
   });
 });
 
@@ -62,7 +62,27 @@ app.delete("/books/:id", (req, res) => {
 
   db.query(query, [bookId], (err, data) => {
     if (err) return res.json(err);
-    return res.json("Book has been deleted successfully");
+    return res.json("The book has been deleted successfully");
+  });
+});
+
+app.put("/books/:id", (req, res) => {
+  const bookId = req.params.id;
+  const query =
+    "UPDATE books SET `title` = ?, `releaseDate` = ?, `desc` = ?, `pages` = ?, `cover` = ?, `price` = ? WHERE id = ?";
+
+  const values = [
+    req.body.title,
+    req.body.releaseDate,
+    req.body.desc,
+    req.body.pages,
+    req.body.cover,
+    req.body.price,
+  ];
+
+  db.query(query, [...values, bookId], (err, data) => {
+    if (err) return res.json(err);
+    return res.json("The book has been updated successfully");
   });
 });
 
