@@ -29,13 +29,13 @@ app.get("/books", (req, res) => {
 app.get("/books/:id", (req, res) => {
   const bookId = req.params.id;
   const query = "SELECT * FROM books WHERE id = ?";
-  console.log(query)
 
-  db.query(query , [bookId] , (err , data) => {
-    if (err) return res.status(500).json({error : err.message});
-    if (data.length === 0) return res.status(404).json({message : "Book not found"})
-    return res.json(data[0])
-  })
+  db.query(query, [bookId], (err, data) => {
+    if (err) return res.status(500).json({ error: err.message });
+    if (data.length === 0)
+      return res.status(404).json({ message: "Book not found" });
+    return res.json(data[0]);
+  });
 });
 
 app.post("/books", (req, res) => {
@@ -53,6 +53,16 @@ app.post("/books", (req, res) => {
   db.query(query, [values], (err, data) => {
     if (err) return res.json(err);
     return res.json("Book has been created successfully");
+  });
+});
+
+app.delete("/books/:id", (req, res) => {
+  const bookId = req.params.id;
+  const query = "DELETE FROM books WHERE id = ?";
+
+  db.query(query, [bookId], (err, data) => {
+    if (err) return res.json(err);
+    return res.json("Book has been deleted successfully");
   });
 });
 
