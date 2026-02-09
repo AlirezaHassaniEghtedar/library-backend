@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon index.js",
+    "seed": "node seed/index.js"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +15,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
-    "mysql": "^2.18.1",
+    "mysql2": "^3.16.3",
     "nodemon": "^3.1.10"
   },
   "devDependencies": {
