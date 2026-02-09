@@ -50,7 +50,7 @@ app.post("/books", async (req, res) => {
   try {
     const query = `
       INSERT INTO books
-        (title, releaseDate, \`desc\`, page, cover, price)
+        (title, releaseDate, \`desc\`, pages, cover, price)
       VALUES (?, ?, ?, ?, ?, ?)
     `;
 
@@ -58,7 +58,7 @@ app.post("/books", async (req, res) => {
       req.body.title,
       req.body.releaseDate,
       req.body.desc,
-      req.body.page,
+      req.body.pages,
       req.body.cover,
       req.body.price,
     ];
@@ -97,7 +97,7 @@ app.put("/books/:id", async (req, res) => {
     const bookId = req.params.id;
     const query = `
     UPDATE books
-    SET title = ?, releaseDate = ?, \`desc\` = ?, page = ?, cover = ?, price = ?
+    SET title = ?, releaseDate = ?, \`desc\` = ?, pages = ?, cover = ?, price = ?
     WHERE id = ?
   `;
 
@@ -105,7 +105,7 @@ app.put("/books/:id", async (req, res) => {
       req.body.title,
       req.body.releaseDate,
       req.body.desc,
-      req.body.page,
+      req.body.pages,
       req.body.cover,
       req.body.price,
       bookId,
