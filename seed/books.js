@@ -10,7 +10,7 @@ export const BOOKS = [
     cover:
       "https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/covers/1.png",
     index: 0,
-    price: 10
+    price: 10,
   },
   {
     number: 2,
@@ -23,7 +23,7 @@ export const BOOKS = [
     cover:
       "https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/covers/2.png",
     index: 1,
-    price: 22
+    price: 22,
   },
   {
     number: 3,
@@ -36,7 +36,7 @@ export const BOOKS = [
     cover:
       "https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/covers/3.png",
     index: 2,
-    price: 10
+    price: 10,
   },
   {
     number: 4,
@@ -49,7 +49,7 @@ export const BOOKS = [
     cover:
       "https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/covers/4.png",
     index: 3,
-    price: 20
+    price: 20,
   },
   {
     number: 5,
@@ -62,7 +62,7 @@ export const BOOKS = [
     cover:
       "https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/covers/5.png",
     index: 4,
-    price: 10
+    price: 10,
   },
   {
     number: 6,
@@ -75,7 +75,7 @@ export const BOOKS = [
     cover:
       "https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/covers/6.png",
     index: 5,
-    price: 20
+    price: 20,
   },
   {
     number: 7,
@@ -88,7 +88,7 @@ export const BOOKS = [
     cover:
       "https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/covers/7.png",
     index: 6,
-    price: 10
+    price: 10,
   },
   {
     number: 8,
@@ -101,6 +101,6 @@ export const BOOKS = [
     cover:
       "https://raw.githubusercontent.com/fedeperin/potterapi/main/public/images/covers/8.png",
     index: 7,
-    price: 10
+    price: 10,
   },
 ];
